@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 from django.contrib.messages import constants as messages
 from decouple import config
+import os
 MESSAGE_TAGS = {
     messages.INFO: '',
     50: 'critical',
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -133,6 +135,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # added manually
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
