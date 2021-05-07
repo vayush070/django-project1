@@ -32,7 +32,11 @@ SECRET_KEY = config('secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+
+    'macks-django1.herokuapp.com'
+
+]
 
 
 # Application definition
