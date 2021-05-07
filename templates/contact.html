@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+<div class="container-fluid px-0">
+        <img src="/static/contact-bg.jfif" alt="">
+</div>
+<div class="container ">
+        <h3 style="position: absolute;top: 63px;color: lightgrey;font-size: 41px;">Contact Us</h3>
+
+        <div class="container" style="top: -42px;position: absolute;left: 48px;">
+                <form method="POST" action="/contact">
+                        {% csrf_token %}
+                        <div class="mb-3" style="position: absolute;top: 122px;left: 300px;color: lightgrey;">
+                                <label for="name" class="form-label">Name : </label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name"
+                                        style="background-color: lightgrey;">
+                        </div>
+                        <div class="mb-3" style="position: absolute;top: 206px;left: 300px;color: lightgrey;">
+                                <label for="email" class="form-label">Email Id : </label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Id"
+                                        style="background-color: lightgrey;">
+                        </div>
+                        <div class="mb-3" style="position: absolute;top: 290px;left: 300px;color: lightgrey;">
+                                <label for="mobile" class="form-label">Mobile No. : </label>
+                                <input type="number" class="form-control" id="mobile" name="mobile"
+                                        placeholder="Mobile Number" style="background-color: lightgrey;">
+                        </div>
+                        <div class="mb-3" style="position: absolute;top: 374px;left: 300px;color: lightgrey;">
+                                <label for="description" class="form-label">Tell me about you want me to contact for :
+                                </label>
+                                <textarea name="description" class="form-control" name="description" id="description"
+                                        cols="30" rows="4" placeholder="Description.."
+                                        style="background-color: lightgrey;"></textarea>
+                        </div>
+                        <button type="submit"
+                                style="left: 306px;position: absolute;top: 535px;background: #4fc6c1;border-radius: 13px;border: none;padding: 4px 39px;box-shadow: 0 5px #999;">
+                                Submit
+                        </button>
+
+                </form>
+
+
+        </div>
+
+</div>
+{% endblock body %}
