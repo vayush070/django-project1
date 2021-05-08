@@ -14,6 +14,10 @@ from pathlib import Path
 from django.contrib.messages import constants as messages
 from decouple import config
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 MESSAGE_TAGS = {
     messages.INFO: '',
     50: 'critical',
@@ -27,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('secret-key')
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
