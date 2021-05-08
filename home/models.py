@@ -9,7 +9,6 @@ class Contact(models.Model):
     description=models.TextField()
     date = models.DateTimeField(default=datetime.now(), blank=True)
 
-
     def __str__(self):
         return self.email
     
