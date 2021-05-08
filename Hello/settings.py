@@ -14,9 +14,9 @@ from pathlib import Path
 from django.contrib.messages import constants as messages
 from decouple import config
 import os
-from dotenv import load_dotenv
+from .env import load_.env
 
-load_dotenv()
+load_.env()
 
 MESSAGE_TAGS = {
     messages.INFO: '',
