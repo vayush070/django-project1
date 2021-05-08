@@ -34,7 +34,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
 
-    'macks-django1.herokuapp.com'
+    'macks-django1.herokuapp.com',
+    '127.0.0.1'
 
 ]
 
